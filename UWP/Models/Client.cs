@@ -8,9 +8,9 @@ namespace UWP.Models
 {
     class Client
     {
-        private static string email;
-        private static string title;
-        private static string content;
+        private string email;
+        private string title;
+        private string content;
 
         public Client(string email, string title, string content)
         {
