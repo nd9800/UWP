@@ -14,32 +14,31 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using UWP.Models;
 
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
-namespace UWP
+namespace UWP.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class SplitViewDemo : Page
     {
-   
-        public MainPage()
+        public SplitViewDemo()
         {
             this.InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-           string email = input1.Text;
-           string title = input2.Text;
-           string content = input3.Text;
-            Client c = new Client(email, title, content);
-            Lists.Items.Add(c);
+            SV.IsPaneOpen = !SV.IsPaneOpen; //Dang True thanh False, nguoc lai
         }
 
-     
+        private void ListUsers_Loaded(object sender, RoutedEventArgs e)
+        {
+            User u1 = new User("Nguyễn Văn An","anv@gmail.com");
+            User u2 = new User("Nguyễn Văn Bình", "bn@gmail.com");
+            ListUsers.Items.Add(u1);
+            ListUsers.Items.Add(u2);
+        }
     }
 }

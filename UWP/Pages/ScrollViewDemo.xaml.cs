@@ -12,34 +12,19 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using UWP.Models;
 
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
-namespace UWP
+namespace UWP.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class ScrollViewDemo : Page
     {
-   
-        public MainPage()
+        public ScrollViewDemo()
         {
             this.InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-           string email = input1.Text;
-           string title = input2.Text;
-           string content = input3.Text;
-            Client c = new Client(email, title, content);
-            Lists.Items.Add(c);
-        }
-
-     
     }
 }
