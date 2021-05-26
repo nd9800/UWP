@@ -33,6 +33,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="models:Client">
                         <StackPanel>
+                            
                             <TextBlock Text="{x:Bind Email}"/>
                             <TextBlock Text="{x:Bind Title}"/>
                             <TextBlock Text="{x:Bind Content}"/>

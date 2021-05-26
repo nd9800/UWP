@@ -12,11 +12,13 @@ namespace UWP.Models
         private string title;
         private string content;
 
+
         public Client(string email, string title, string content)
         {
             Email = email;
             Title = title;
             Content = content;
+      
         }
 
         public string Email
