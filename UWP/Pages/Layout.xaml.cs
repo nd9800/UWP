@@ -34,7 +34,7 @@ namespace UWP.Pages
             Menu.Items.Add(new MenuItem { Name = "Home", MenuPage="home" });
    
             Menu.Items.Add(new MenuItem { Name = "Customer", MenuPage = "customer" });
-            Menu.Items.Add(new MenuItem { Name = "Mail", MenuPage = "mail" });
+            Menu.Items.Add(new MenuItem { Name = "Contact", MenuPage = "contact" });
 
         }
 
@@ -51,8 +51,8 @@ namespace UWP.Pages
                 case "customer":
                     MainFrame.Navigate(typeof(Pages.Customer));
                     break;
-                case "mail":
-                    MainFrame.Navigate(typeof(Pages.Mail));
+                case "contact":
+                    MainFrame.Navigate(typeof(Pages.Contact));
                     break;
             }
            

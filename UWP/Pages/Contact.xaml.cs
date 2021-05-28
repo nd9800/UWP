@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using UWP.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -21,29 +20,24 @@ namespace UWP.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Customer_create : Page
+    public sealed partial class Contact : Page
     {
-        private static List<CustomerList> c = new List<CustomerList>();
-        public Customer_create()
+        public Contact()
         {
             this.InitializeComponent();
         }
 
-        internal static List<CustomerList> C { get => c; set => c = value; }
-
-        private void Button2_Click(object sender, RoutedEventArgs e)
+        private void ListContact_Loaded(object sender, RoutedEventArgs e)
         {
-            
-            string name = input1.Text;
-            int age = Convert.ToInt32(input2.Text);
-            CustomerList cl = new CustomerList(name, age);
-            C.Add(cl);
-            SubFrame2.Navigate(typeof(Pages.Customer));
+            foreach (Object value in Contact_create.C)
+            {
+                ListContact.Items.Add(value);
+            }
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SubFrame2.Navigate(typeof(Pages.Customer));
+            SubFrame.Navigate(typeof(Pages.Contact_create));
         }
     }
 }

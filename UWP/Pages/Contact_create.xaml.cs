@@ -21,29 +21,28 @@ namespace UWP.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Customer_create : Page
+    public sealed partial class Contact_create : Page
     {
-        private static List<CustomerList> c = new List<CustomerList>();
-        public Customer_create()
+        private static List<ContactList> c = new List<ContactList>();
+        public Contact_create()
         {
             this.InitializeComponent();
         }
-
-        internal static List<CustomerList> C { get => c; set => c = value; }
+        internal static List<ContactList> C { get => c; set => c = value; }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-            
+
             string name = input1.Text;
-            int age = Convert.ToInt32(input2.Text);
-            CustomerList cl = new CustomerList(name, age);
+            string content = input2.Text;
+            ContactList cl = new ContactList(name, content);
             C.Add(cl);
-            SubFrame2.Navigate(typeof(Pages.Customer));
+            SubFrame2.Navigate(typeof(Pages.Contact));
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            SubFrame2.Navigate(typeof(Pages.Customer));
+            SubFrame2.Navigate(typeof(Pages.Contact));
         }
     }
 }

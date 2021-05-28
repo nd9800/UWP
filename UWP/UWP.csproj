@@ -123,9 +123,16 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\ContactList.cs" />
     <Compile Include="Models\CustomerList.cs" />
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Pages\Contact.xaml.cs">
+      <DependentUpon>Contact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contact_create.xaml.cs">
+      <DependentUpon>Contact_create.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Customer.xaml.cs">
       <DependentUpon>Customer.xaml</DependentUpon>
     </Compile>
@@ -172,6 +179,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Contact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Contact_create.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Customer.xaml">
       <SubType>Designer</SubType>
